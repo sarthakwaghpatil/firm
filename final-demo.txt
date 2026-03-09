@@ -1,0 +1,20 @@
+jagdhane-demo/
+│
+├── index.html
+├── login.html
+│
+├── dashboard/
+│   ├── admin-dashboard.html
+│   ├── advocate-dashboard.html
+│   └── client-dashboard.html
+│
+├── pages/
+│   ├── clients.html
+│   ├── cases.html
+│   ├── appointments.html
+│   └── documents.html
+│
+├── assets/
+│   ├── css/
+│   ├── js/
+│   └── images/

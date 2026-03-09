@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADV Platform - Login</title>
+
+    <link rel="stylesheet" href="../src/css/style.css">
+    <script type="module" src="../src/js/index.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>ADV Microservice Platform</h1>
+        <p class="subtitle">Secure Authentication System</p>
+
+        <!-- Tabs -->
+        <div class="tab-buttons">
+            <button id="showLogin" class="active">Login</button>
+            <button id="showRegister">Register</button>
+        </div>
+
+        <!-- Login Form -->
+        <div id="loginForm" class="form-section">
+            <input type="email" id="loginEmail" placeholder="Email" required>
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <button id="loginBtn" class="primary-btn">Login</button>
+        </div>
+
+        <!-- Register Form -->
+        <div id="registerForm" class="form-section hidden">
+            <input type="email" id="registerEmail" placeholder="Email" required>
+            <input type="password" id="registerPassword" placeholder="Password" required>
+            <button id="registerBtn" class="primary-btn">Register</button>
+        </div>
+
+        <!-- Loader -->
+        <div id="loader" class="loader hidden">Processing...</div>
+
+        <!-- Error Message -->
+        <div id="errorMessage" class="error"></div>
+
+    </div>
+
+</body>
+</html>
