@@ -31,7 +31,7 @@ async def register(username: str = Form(...), password: str = Form(...)):
         "password": password
     })
 
-    return RedirectResponse("/dashboard", status_code=302)
+    return RedirectResponse("/login", status_code=302)
 
 
 # LOGIN USER
