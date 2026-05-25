@@ -1,0 +1,47 @@
+frontend-service/
+│
+├── app/
+│   │
+│   ├── main.py
+│   ├── config.py
+│   ├── dependencies.py
+│   │
+│   ├── routes/
+│   │   ├── dashboard.py
+│   │   ├── auth.py
+│   │   └── pages.py
+│   │
+│   ├── templates/
+│   │   ├── base.html
+│   │   ├── index.html
+│   │   ├── login.html
+│   │   ├── dashboard.html
+│   │   ├── cases.html
+│   │   ├── clients.html
+│   │   └── documents.html
+│   │
+│   ├── static/
+│   │   ├── css/
+│   │   │   ├── style.css
+│   │   │   └── dashboard.css
+│   │   │
+│   │   ├── js/
+│   │   │   ├── app.js
+│   │   │   └── dashboard.js
+│   │   │
+│   │   ├── images/
+│   │   │   └── logo.png
+│   │   │
+│   │   └── vendors/
+│   │       └── (bootstrap, icons if local)
+│   │
+│   └── utils/
+│       └── jwt_helper.py
+│
+├── tests/
+│   └── test_routes.py
+│
+├── Dockerfile
+├── requirements.txt
+├── .env
+└── README.md

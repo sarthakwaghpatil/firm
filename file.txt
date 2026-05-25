@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - frontend
+      - api-gateway
+
+  frontend:
+    build: ./frontend-service
+    expose:
+      - "3000"
+    depends_on:
+      - identity-service
+
+  identity-service:
+    build: ./identity-service
+    expose:
+      - "5000"
+
+  api-gateway:
+    build: ./api-gateway
+    expose:
+      - "8000"
+    depends_on:
+      - identity-service

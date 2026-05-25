@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+
+  frontend:
+    build: ./frontend-service
+    ports:
+      - "3000:3000"
+    depends_on:
+      - identity-service
+
+  identity-service:
+    build: ./identity-service
+    ports:
+      - "5000:5000"
+
+  api-gateway:
+    build: ./api-gateway
+    ports:
+      - "8000:8000"
+    depends_on:
+      - identity-service

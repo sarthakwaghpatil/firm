@@ -1,0 +1,12 @@
+const ENV = "dev";
+
+const CONFIG = {
+    dev: {
+        BASE_URL: "http://127.0.0.1:8000"
+    },
+    prod: {
+        BASE_URL: "http://api-gateway:8000"
+    }
+};
+
+export const BASE_URL = CONFIG[ENV].BASE_URL;
