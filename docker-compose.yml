@@ -2,21 +2,35 @@ version: "3"
 
 services:
 
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d:ro
+    depends_on:
+      - frontend
+      - api-gateway
+    restart: always
+
   frontend:
     build: ./frontend-service
-    ports:
-      - "3000:3000"
+    expose:
+      - "3000"
     depends_on:
       - identity-service
+    restart: always
 
   identity-service:
     build: ./identity-service
-    ports:
-      - "5000:5000"
+    expose:
+      - "5000"
+    restart: always
 
   api-gateway:
     build: ./api-gateway
-    ports:
-      - "8000:8000"
+    expose:
+      - "8000"
     depends_on:
       - identity-service
+    restart: always
